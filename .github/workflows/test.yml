@@ -7,3 +7,7 @@ jobs:
     steps:
       - name: List files in the repository
         run:  printenv
+      - name: Access the event names
+        run:  
+         echo " this was triggered by event name ${{ github.event_name }}"
+         echo " Triggered branch ${{ github.ref_name }}"
